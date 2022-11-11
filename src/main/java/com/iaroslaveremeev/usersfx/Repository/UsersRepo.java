@@ -31,10 +31,39 @@ public class UsersRepo {
         ObjectMapper objectMapper = new ObjectMapper();
         try (BufferedInputStream bufferedInputStream =
                      new BufferedInputStream(httpURLConnection.getInputStream())) {
-            ArrayList<User> usersFound = objectMapper
+            this.users = objectMapper
                     .readValue(bufferedInputStream, new TypeReference<>() {});
-
         }
+        catch (IOException e){
+            e.getMessage();
+        }
+    }
+
+    public ArrayList<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(ArrayList<User> users) {
         this.users = users;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UsersRepo usersRepo = (UsersRepo) o;
+        return Objects.equals(users, usersRepo.users);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(users);
+    }
+
+    @Override
+    public String toString() {
+        return "UsersRepo{" +
+                "users=" + users +
+                '}';
     }
 }

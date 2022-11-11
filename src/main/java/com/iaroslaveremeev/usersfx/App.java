@@ -1,5 +1,6 @@
 package com.iaroslaveremeev.usersfx;
 
+import com.iaroslaveremeev.usersfx.Repository.UsersRepo;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -17,7 +18,9 @@ public class App extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) {
-        launch();
+    public static void main(String[] args) throws IOException {
+        UsersRepo usersRepo = new UsersRepo("https://jsonplaceholder.typicode.com/users");
+        System.out.println(usersRepo.getUsers());
+        /*launch();*/
     }
 }

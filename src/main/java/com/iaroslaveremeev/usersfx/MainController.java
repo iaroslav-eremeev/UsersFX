@@ -14,19 +14,19 @@ public class MainController {
     public ComboBox<User> usersRepoComboBox;
     public Button buttonUserChosen;
 
-    @FXML
-    public void initialize(){
+    /*@FXML*/
+    /*public void initialize(){
         UsersRepo usersRepo = new UsersRepo();
 
         usersRepoComboBox.setItems(FXCollections.observableList(usersRepo.getUsers()));
-    }
+    }*/
 
     @FXML
     private Label welcomeText;
 
-    @FXML
-    protected void onButtonClick() {
+    /*@FXML*/
+    /*protected void onButtonClick() {
         User selectedUser = this.usersRepoComboBox.getSelectionModel().getSelectedItem();
         String userData = this.usersRepoComboBox;
-    }
+    }*/
 }
