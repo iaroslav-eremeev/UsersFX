@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfbfadfc-61f9-475e-b09b-eca73f2ae103" name="Changes" comment="Add all classes and users repo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/test/Test.java" afterDir="false" />
+    <list default="true" id="bfbfadfc-61f9-475e-b09b-eca73f2ae103" name="Changes" comment="Update UsersRepo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/Repository/UsersRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/Repository/UsersRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java_core_learning" beforeDir="false" afterPath="$PROJECT_DIR$/../java_core_learning" afterDir="false" />
     </list>
@@ -80,6 +78,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add all classes and users repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add all classes and users repo" />
+    <MESSAGE value="Update UsersRepo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update UsersRepo" />
   </component>
 </project>

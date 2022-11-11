@@ -31,11 +31,11 @@ public class UsersRepo {
         ObjectMapper objectMapper = new ObjectMapper();
         try (BufferedInputStream bufferedInputStream =
                      new BufferedInputStream(httpURLConnection.getInputStream())) {
-            this.users = objectMapper
-                    .readValue(bufferedInputStream, new TypeReference<>() {});
+            byte[] bytes = bufferedInputStream.readAllBytes();
+            this.users = objectMapper.readValue(bytes, new TypeReference<>() {});
         }
         catch (IOException e){
-            e.getMessage();
+            throw new RuntimeException(e);
         }
     }
 

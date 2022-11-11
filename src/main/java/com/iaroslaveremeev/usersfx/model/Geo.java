@@ -7,8 +7,7 @@ public class Geo {
     private String lat;
     private String lng;
 
-    public Geo(String lng) {
-        this.lng = lng;
+    public Geo() {
     }
 
     public Geo(String lat, String lng) {
