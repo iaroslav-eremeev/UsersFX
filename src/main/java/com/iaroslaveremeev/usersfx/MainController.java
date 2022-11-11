@@ -1,14 +1,12 @@
 package com.iaroslaveremeev.usersfx;
 
 import com.iaroslaveremeev.usersfx.model.User;
-import com.iaroslaveremeev.usersfx.model.UsersRepo;
+import com.iaroslaveremeev.usersfx.Repository.UsersRepo;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-
-import java.util.ArrayList;
 
 public class MainController {
 

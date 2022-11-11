@@ -8,41 +8,32 @@ public class User {
     private String name;
     private String username;
     private String email;
-    private com.iaroslaveremeev.usersfx.model.Address address;
-
-    /**
-     * "id": 1,
-     *     "name": "Leanne Graham",
-     *     "username": "Bret",
-     *     "email": "Sincere@april.biz",
-     *     "address": {
-     *       "street": "Kulas Light",
-     *       "suite": "Apt. 556",
-     *       "city": "Gwenborough",
-     *       "zipcode": "92998-3874",
-     *       "geo": {
-     *         "lat": "-37.3159",
-     *         "lng": "81.1496"
-     *       }
-     *     },
-     *     "phone": "1-770-736-8031 x56442",
-     *     "website": "hildegard.org",
-     *     "company": {
-     *       "name": "Romaguera-Crona",
-     *       "catchPhrase": "Multi-layered client-server neural-net",
-     *       "bs": "harness real-time e-markets"
-     *     }
-     *   },
-     */
-    private String name;
-    private String age;
+    private Address address;
+    private String phone;
+    private String website;
+    private Company company;
 
     public User() {
     }
 
-    public User(String name, String age) {
+    public User(int id, String name, String username, String email,
+                Address address, String phone, String website, Company company) {
+        this.id = id;
         this.name = name;
-        this.age = age;
+        this.username = username;
+        this.email = email;
+        this.address = address;
+        this.phone = phone;
+        this.website = website;
+        this.company = company;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -53,12 +44,52 @@ public class User {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", age='" + age + '\'' +
-                '}';
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
     @Override
@@ -66,19 +97,28 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Objects.equals(name, user.name) && Objects.equals(age, user.age);
+        return id == user.id && Objects.equals(name, user.name) &&
+                Objects.equals(username, user.username) && Objects.equals(email, user.email) &&
+                Objects.equals(address, user.address) && Objects.equals(phone, user.phone) &&
+                Objects.equals(website, user.website) && Objects.equals(company, user.company);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age);
+        return Objects.hash(id, name, username, email, address, phone, website, company);
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", address=" + address +
+                ", phone='" + phone + '\'' +
+                ", website='" + website + '\'' +
+                ", company=" + company +
+                '}';
     }
 }

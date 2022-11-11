@@ -1,6 +1,5 @@
 package com.iaroslaveremeev.usersfx;
 
-import com.iaroslaveremeev.usersfx.model.UsersRepo;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

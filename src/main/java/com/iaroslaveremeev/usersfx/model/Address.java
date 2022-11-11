@@ -1,7 +1,5 @@
 package com.iaroslaveremeev.usersfx.model;
 
-import src.main.java.com.iaroslaveremeev.usersfx.model.Geo;
-
 import java.util.Objects;
 
 public class Address {

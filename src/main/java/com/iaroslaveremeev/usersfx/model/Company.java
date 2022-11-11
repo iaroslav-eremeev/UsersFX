@@ -1,4 +1,4 @@
-package src.main.java.com.iaroslaveremeev.usersfx.model;
+package com.iaroslaveremeev.usersfx.model;
 
 import java.util.Objects;
 
