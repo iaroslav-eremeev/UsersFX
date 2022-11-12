@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfbfadfc-61f9-475e-b09b-eca73f2ae103" name="Changes" comment="Debug Geo and Company classes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/iaroslaveremeev/usersfx/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/iaroslaveremeev/usersfx/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java_core_learning" beforeDir="false" afterPath="$PROJECT_DIR$/../java_core_learning" afterDir="false" />
+    <list default="true" id="bfbfadfc-61f9-475e-b09b-eca73f2ae103" name="Changes" comment="Update MainController and App">
+      <change beforePath="$PROJECT_DIR$/../java_core_learning" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +78,7 @@
     <MESSAGE value="Add all classes and users repo" />
     <MESSAGE value="Update UsersRepo" />
     <MESSAGE value="Debug Geo and Company classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debug Geo and Company classes" />
+    <MESSAGE value="Update MainController and App" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update MainController and App" />
   </component>
 </project>

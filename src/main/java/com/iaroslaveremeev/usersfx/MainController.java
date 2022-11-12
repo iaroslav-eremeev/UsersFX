@@ -24,9 +24,6 @@ public class MainController {
     }
 
     @FXML
-    private Label welcomeText;
-
-    @FXML
     protected void onButtonClick() {
         User selectedUser = this.usersRepoComboBox.getSelectionModel().getSelectedItem();
         App.showAlertWithoutHeaderText("Info", selectedUser.toString(), Alert.AlertType.INFORMATION);
