@@ -16,7 +16,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Scene scene = new Scene(loadFXML("main"), 320, 240);
-        stage.setTitle("Hello!");
+        stage.setTitle("Check the list of users found");
         stage.setScene(scene);
         stage.show();
     }
@@ -30,11 +30,8 @@ public class App extends Application {
     public static void showAlertWithoutHeaderText(String title, String content, Alert.AlertType alertType) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
-
-        // Header Text: null
-        alert.setHeaderText(null);
+        alert.setHeaderText("This is the user you've chosen");
         alert.setContentText(content);
-
         alert.showAndWait();
     }
     public static void main(String[] args) throws IOException {
