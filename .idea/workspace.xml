@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bfbfadfc-61f9-475e-b09b-eca73f2ae103" name="Changes" comment="Debug: rename the .fxml file">
+    <list default="true" id="bfbfadfc-61f9-475e-b09b-eca73f2ae103" name="Changes" comment="Add method showInfo to User, correct toString methods for all classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/Repository/UsersRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/Repository/UsersRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/model/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/model/Geo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/model/Geo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_core_learning" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668285189953</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add method showInfo to User, correct toString methods for all classes">
+      <created>1668287433075</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668287433075</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,7 +104,8 @@
     <MESSAGE value="Update MainController and App" />
     <MESSAGE value="Design the main window with SceneBuilder" />
     <MESSAGE value="Debug: rename the .fxml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debug: rename the .fxml file" />
+    <MESSAGE value="Add method showInfo to User, correct toString methods for all classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add method showInfo to User, correct toString methods for all classes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
