@@ -4,9 +4,12 @@ import com.iaroslaveremeev.usersfx.model.User;
 import com.iaroslaveremeev.usersfx.Repository.UsersRepo;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+
+import java.io.IOException;
 
 public class MainController {
 
@@ -14,19 +17,18 @@ public class MainController {
     public ComboBox<User> usersRepoComboBox;
     public Button buttonUserChosen;
 
-    /*@FXML*/
-    /*public void initialize(){
-        UsersRepo usersRepo = new UsersRepo();
-
-        usersRepoComboBox.setItems(FXCollections.observableList(usersRepo.getUsers()));
-    }*/
+    @FXML
+    public void initialize() throws IOException {
+        UsersRepo usersRepo = new UsersRepo("https://jsonplaceholder.typicode.com/users");
+        this.usersRepoComboBox.setItems(FXCollections.observableList(usersRepo.getUsers()));
+    }
 
     @FXML
     private Label welcomeText;
 
-    /*@FXML*/
-    /*protected void onButtonClick() {
+    @FXML
+    protected void onButtonClick() {
         User selectedUser = this.usersRepoComboBox.getSelectionModel().getSelectedItem();
-        String userData = this.usersRepoComboBox;
-    }*/
+        App.showAlertWithoutHeaderText("Info", selectedUser.toString(), Alert.AlertType.INFORMATION);
+    }
 }
