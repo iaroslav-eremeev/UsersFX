@@ -108,17 +108,20 @@ public class User {
         return Objects.hash(id, name, username, email, address, phone, website, company);
     }
 
+    public String showInfo() {
+        return "Selected User:" +
+                "\nId = " + id +
+                "\nName: " + name +
+                "\nUsername: " + username +
+                "\nEmail: " + email +
+                "\nAddress: " + address +
+                "\nPhone: " + phone +
+                "\nWebsite: " + website +
+                "\nCompany: " + company;
+    }
+
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", address=" + address +
-                ", phone='" + phone + '\'' +
-                ", website='" + website + '\'' +
-                ", company=" + company +
-                '}';
+        return name + " (" + username + ", " + email + ")";
     }
 }

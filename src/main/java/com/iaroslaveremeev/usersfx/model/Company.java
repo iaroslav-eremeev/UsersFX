@@ -56,10 +56,8 @@ public class Company {
 
     @Override
     public String toString() {
-        return "Company{" +
-                "name='" + name + '\'' +
-                ", catchPhrase='" + catchPhrase + '\'' +
-                ", bs='" + bs + '\'' +
-                '}';
+        return "\nName of the company: " + name +
+                "\nCatch phrase: " + catchPhrase +
+                "\nBusiness: " + bs;
     }
 }

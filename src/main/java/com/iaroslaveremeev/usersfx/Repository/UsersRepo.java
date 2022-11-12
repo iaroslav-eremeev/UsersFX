@@ -1,6 +1,7 @@
 package com.iaroslaveremeev.usersfx.Repository;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.iaroslaveremeev.usersfx.model.Address;
 import com.iaroslaveremeev.usersfx.model.User;
 
 import java.io.BufferedInputStream;

@@ -46,9 +46,7 @@ public class Geo {
 
     @Override
     public String toString() {
-        return "Geo{" +
-                "lat='" + lat + '\'' +
-                ", lng='" + lng + '\'' +
-                '}';
+        return "\nLatitude: " + lat +
+                "\nLongitude: " + lng;
     }
 }
