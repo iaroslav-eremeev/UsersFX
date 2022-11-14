@@ -12,10 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fillWidth="false" minHeight="551.0" minWidth="400.0" prefHeight="551.0" prefWidth="400.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iaroslaveremeev.usersfx.MainController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
+<VBox maxHeight="500.0" maxWidth="400.0" minHeight="500.0" minWidth="400.0" prefHeight="500.0" prefWidth="400.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iaroslaveremeev.usersfx.MainController">
    <MenuBar prefHeight="26.0" prefWidth="376.0">
      <menus>
        <Menu mnemonicParsing="false" text="File">
@@ -36,14 +33,32 @@
    </MenuBar>
 
     <Label fx:id="welcomeText" />
-   <ComboBox fx:id="usersRepoComboBox" prefHeight="39.0" prefWidth="302.0" />
-    <Button fx:id="buttonUserChosen" onAction="#onButtonClick" prefHeight="26.0" prefWidth="125.0" text="Choose this user!" />
-   <Label prefHeight="38.0" prefWidth="169.0" text="List of the users you chose:">
+   <ComboBox fx:id="usersRepoComboBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="300.0">
+      <VBox.margin>
+         <Insets left="50.0" right="50.0" />
+      </VBox.margin></ComboBox>
+    <Button fx:id="buttonUserChosen" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#onButtonClick" prefHeight="25.0" prefWidth="120.0" text="Choose this user!" textAlignment="CENTER">
+      <VBox.margin>
+         <Insets left="140.0" right="140.0" />
+      </VBox.margin></Button>
+   <Label prefHeight="25.0" prefWidth="160.0" text="List of the users you chose:">
       <font>
          <Font size="14.0" />
       </font>
+      <VBox.margin>
+         <Insets left="120.0" right="120.0" />
+      </VBox.margin>
    </Label>
-   <ListView fx:id="chosenUsersList" minHeight="25.0" prefHeight="132.0" prefWidth="356.0" />
-   <Button fx:id="JsonMakerButton" mnemonicParsing="false" onAction="#onJsonMakerButtonClick" prefHeight="26.0" prefWidth="136.0" text="Make JSON from list" />
-   <Button mnemonicParsing="false" onAction="#buttonNewForm" text="Button" />
+   <ListView fx:id="chosenUsersList" maxHeight="200.0" maxWidth="-Infinity" minHeight="25.0" minWidth="-Infinity" prefHeight="25.0" prefWidth="300.0">
+      <VBox.margin>
+         <Insets left="50.0" right="50.0" />
+      </VBox.margin></ListView>
+   <Button fx:id="JsonMakerButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onJsonMakerButtonClick" prefHeight="25.0" prefWidth="140.0" text="Make JSON from list" textAlignment="CENTER">
+      <VBox.margin>
+         <Insets left="130.0" right="130.0" />
+      </VBox.margin></Button>
+   <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonNewForm" prefHeight="25.0" prefWidth="180.0" text="Go check the developers part" textAlignment="CENTER">
+      <VBox.margin>
+         <Insets left="110.0" right="110.0" />
+      </VBox.margin></Button>
 </VBox>
