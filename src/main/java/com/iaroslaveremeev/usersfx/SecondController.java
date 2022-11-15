@@ -4,12 +4,14 @@ import com.iaroslaveremeev.usersfx.Repository.EmployeesRepo;
 import com.iaroslaveremeev.usersfx.Repository.UsersRepo;
 import com.iaroslaveremeev.usersfx.model.Employee;
 import com.iaroslaveremeev.usersfx.model.User;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -24,6 +26,11 @@ public class SecondController {
 
     public HashMap<String, ArrayList<Employee>> employeesHashMap = new HashMap<>();
 
+    @FXML
+    public void initialize() throws IOException {
+        EmployeesRepo employeesRepo = new EmployeesRepo("employees.json");
+        this.employeesRepoComboBox.setItems(FXCollections.observableList(employeesRepo.getEmployees()));
+    }
     @FXML
     public void buttonFileOpen(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();

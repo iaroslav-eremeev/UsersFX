@@ -1,8 +1,17 @@
 package com.iaroslaveremeev.usersfx.Repository;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.iaroslaveremeev.usersfx.model.Employee;
 import com.iaroslaveremeev.usersfx.model.User;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -12,8 +21,15 @@ public class EmployeesRepo {
     public EmployeesRepo() {
     }
 
-    public EmployeesRepo(ArrayList<Employee> employees) {
-        this.employees = employees;
+    public EmployeesRepo(String link) throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        try (BufferedReader bufferedReader =
+                     new BufferedReader(new FileReader(link))) {
+            this.employees = objectMapper.readValue(bufferedReader, new TypeReference<>() {});
+        }
+        catch (IOException e){
+            throw new RuntimeException(e);
+        }
     }
 
     public ArrayList<Employee> getEmployees() {
