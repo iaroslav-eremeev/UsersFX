@@ -63,13 +63,12 @@ public class Employee {
         return Objects.hash(name, surname, experience, job);
     }
 
+    public String showNameSurname() {
+        return name + surname;
+    }
+
     @Override
     public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", experience=" + experience +
-                ", job='" + job + '\'' +
-                '}';
+        return name + surname + ", " + job + ", " + experience + " years of experience";
     }
 }
