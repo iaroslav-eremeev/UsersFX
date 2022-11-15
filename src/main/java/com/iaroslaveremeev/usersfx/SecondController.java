@@ -55,17 +55,20 @@ public class SecondController {
         this.employeesHashMap.getOrDefault(selectedEmployee.getJob(), new ArrayList<>());
         this.employeesHashMap.computeIfAbsent(selectedEmployee.getJob(), k -> new ArrayList<>())
                     .add(selectedEmployee);
-        resRepo.addEmployee(selectedEmployee);
-        if (this.employeesHashMap.get("developer") != null && !resRepo.getEmployees().contains(selectedEmployee)){
+        if (this.employeesHashMap.get("developer") != null){
+            this.chosenDevsList.getItems().clear();
             this.chosenDevsList.getItems().add(this.employeesHashMap.get("developer"));
         }
-        if (this.employeesHashMap.get("project_manager") != null && !resRepo.getEmployees().contains(selectedEmployee)){
+        if (this.employeesHashMap.get("project_manager") != null){
+            this.chosenManagersList.getItems().clear();
             this.chosenManagersList.getItems().add(this.employeesHashMap.get("project_manager"));
         }
-        if (this.employeesHashMap.get("designer") != null && !resRepo.getEmployees().contains(selectedEmployee)){
+        if (this.employeesHashMap.get("designer") != null){
+            this.chosenDesignersList.getItems().clear();
             this.chosenDesignersList.getItems().add(this.employeesHashMap.get("designer"));
         }
-        if (this.employeesHashMap.get("tester") != null && !resRepo.getEmployees().contains(selectedEmployee)){
+        if (this.employeesHashMap.get("tester") != null){
+            this.chosenTestersList.getItems().clear();
             this.chosenTestersList.getItems().add(this.employeesHashMap.get("tester"));
         }
     }
