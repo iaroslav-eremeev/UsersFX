@@ -52,10 +52,10 @@
     </Label>
    <TableView prefHeight="200.0" prefWidth="200.0">
      <columns>
-         <TableColumn prefWidth="75.0" text="Developers" />
-       <TableColumn prefWidth="75.0" text="Testers" />
-       <TableColumn prefWidth="75.0" text="Designers" />
-         <TableColumn prefWidth="75.0" text="Project managers" />
+         <TableColumn fx:id="chosenDevsList" prefWidth="75.0" text="Developers" />
+       <TableColumn fx:id="chosenTestersList" prefWidth="75.0" text="Testers" />
+       <TableColumn fx:id="chosenDesignersList" prefWidth="75.0" text="Designers" />
+         <TableColumn fx:id="chosenManagersList" prefWidth="75.0" text="Project managers" />
      </columns>
       <columnResizePolicy>
          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

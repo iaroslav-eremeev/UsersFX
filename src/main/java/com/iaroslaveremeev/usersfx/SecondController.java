@@ -43,11 +43,11 @@ public class SecondController {
     public void onButtonEmployeeChosenClick(ActionEvent actionEvent) {
         Employee selectedEmployee = this.employeesRepoComboBox.getSelectionModel().getSelectedItem();
         this.employeesHashMap.getOrDefault(selectedEmployee.getJob(), new ArrayList<>());
-        this.employeesHashMap.get(selectedEmployee.getJob()).add(selectedEmployee);
-        /*this.chosenUsersList.getItems().add(selectedUser);*/
+        this.employeesHashMap.computeIfAbsent(selectedEmployee.getJob(), k -> new ArrayList<>())
+                .add(selectedEmployee);
+        this.chosenDevsList.getItems().setAll(this.employeesHashMap.get("developer"));
+        this.chosenManagersList.getItems().setAll(this.employeesHashMap.get("project_manager"));
+        this.chosenDesignersList.getItems().setAll(this.employeesHashMap.get("designer"));
+        this.chosenTestersList.getItems().setAll(this.employeesHashMap.get("tester"));
     }
-    /*public void initData(String data){
-        this.data = data;
-        App.showAlertWithoutHeaderText("Info", this.data.toString(), Alert.AlertType.INFORMATION);
-    }*/
 }
