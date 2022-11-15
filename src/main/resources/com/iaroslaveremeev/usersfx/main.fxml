@@ -57,7 +57,7 @@
       <VBox.margin>
          <Insets />
       </VBox.margin></Button>
-   <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonNewForm" prefHeight="25.0" prefWidth="180.0" text="Go check the developers part" textAlignment="CENTER">
+   <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#buttonNewForm" prefHeight="25.0" prefWidth="180.0" text="Go check the employees part" textAlignment="CENTER">
       <VBox.margin>
          <Insets bottom="30.0" />
       </VBox.margin></Button>

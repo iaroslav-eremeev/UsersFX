@@ -19,6 +19,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import static com.iaroslaveremeev.usersfx.App.loadFXML;
+
 public class MainController {
 
     @FXML
@@ -41,6 +43,7 @@ public class MainController {
         App.showAlertWithoutHeaderText("Info", selectedUser.showInfo(), Alert.AlertType.INFORMATION);
     }
 
+    @FXML
     public void onJsonMakerButtonClick() {
         ObjectMapper objectMapper = new ObjectMapper();
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("users.json"))){
@@ -71,19 +74,15 @@ public class MainController {
                         "second.fxml"
                 )
         );
-
         Stage stage = new Stage(StageStyle.DECORATED);
         stage.setScene(
-                new Scene(loader.load())
+                new Scene(loader.load(), 500, 500)
         );
-
+        stage.setTitle("Fill the lists!");
         SecondController controller = loader.getController();
         controller.initData("dfghjk");
-
         stage.show();
-
         Stage close = (Stage) this.buttonUserChosen.getScene().getWindow();
-        // do what you have to do
         close.close();
     }
 
