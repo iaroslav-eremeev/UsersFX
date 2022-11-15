@@ -15,7 +15,7 @@ public class App extends Application {
     private static Scene scene;
     @Override
     public void start(Stage stage) throws IOException {
-        Scene scene = new Scene(loadFXML("main"), 320, 240);
+        Scene scene = new Scene(loadFXML("main"), 400, 500);
         stage.setTitle("Check the list of users found");
         stage.setScene(scene);
         stage.show();
