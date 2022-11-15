@@ -5,9 +5,11 @@ import com.iaroslaveremeev.usersfx.Repository.UsersRepo;
 import com.iaroslaveremeev.usersfx.model.Employee;
 import com.iaroslaveremeev.usersfx.model.User;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -19,10 +21,10 @@ public class SecondController {
     @FXML
     public ComboBox<Employee> employeesRepoComboBox;
     public Button buttonEmployeeChosen;
-    public TableColumn chosenDevsList;
-    public TableColumn chosenTestersList;
-    public TableColumn chosenDesignersList;
-    public TableColumn chosenManagersList;
+    public ListView chosenDevsList;
+    public ListView chosenTestersList;
+    public ListView chosenDesignersList;
+    public ListView chosenManagersList;
 
     public HashMap<String, ArrayList<Employee>> employeesHashMap = new HashMap<>();
 
@@ -31,6 +33,7 @@ public class SecondController {
         EmployeesRepo employeesRepo = new EmployeesRepo("employees.json");
         this.employeesRepoComboBox.setItems(FXCollections.observableList(employeesRepo.getEmployees()));
     }
+
     @FXML
     public void buttonFileOpen(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
@@ -49,9 +52,9 @@ public class SecondController {
         this.employeesHashMap.getOrDefault(selectedEmployee.getJob(), new ArrayList<>());
         this.employeesHashMap.computeIfAbsent(selectedEmployee.getJob(), k -> new ArrayList<>())
                 .add(selectedEmployee);
-        this.chosenDevsList.getColumns().setAll(this.employeesHashMap.get("developer"));
-        this.chosenManagersList.getColumns().setAll(this.employeesHashMap.get("project_manager"));
-        this.chosenDesignersList.getColumns().setAll(this.employeesHashMap.get("designer"));
-        this.chosenTestersList.getColumns().setAll(this.employeesHashMap.get("tester"));
+        this.chosenDevsList.getItems().setAll(this.employeesHashMap.get("developer"));
+        this.chosenManagersList.getItems().setAll(this.employeesHashMap.get("project_manager"));
+        this.chosenDesignersList.getItems().setAll(this.employeesHashMap.get("designer"));
+        this.chosenTestersList.getItems().setAll(this.employeesHashMap.get("tester"));
     }
 }
