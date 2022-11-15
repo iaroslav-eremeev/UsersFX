@@ -15,12 +15,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class UsersRepo {
-
-    /**
-     * При старте формы загружается репозиторий с юзерами по ссылке и отображается в comboBox
-     *
-     * При выборе юзера он должен быть отображен в консоли
-     */
     private ArrayList<User> users = new ArrayList<>();
 
     public UsersRepo() {

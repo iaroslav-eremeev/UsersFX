@@ -19,8 +19,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import static com.iaroslaveremeev.usersfx.App.loadFXML;
-
 public class MainController {
 
     @FXML
@@ -78,11 +76,11 @@ public class MainController {
         stage.setScene(
                 new Scene(loader.load(), 500, 500)
         );
-        stage.setTitle("Fill the lists!");
         SecondController controller = loader.getController();
         controller.initData("dfghjk");
         stage.show();
         Stage close = (Stage) this.buttonUserChosen.getScene().getWindow();
+        // do what you have to do
         close.close();
     }
 
