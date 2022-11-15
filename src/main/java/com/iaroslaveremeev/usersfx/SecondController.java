@@ -6,10 +6,7 @@ import com.iaroslaveremeev.usersfx.model.Employee;
 import com.iaroslaveremeev.usersfx.model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -20,10 +17,10 @@ public class SecondController {
     @FXML
     public ComboBox<Employee> employeesRepoComboBox;
     public Button buttonEmployeeChosen;
-    public ListView chosenDevsList;
-    public ListView chosenTestersList;
-    public ListView chosenDesignersList;
-    public ListView chosenManagersList;
+    public TableColumn chosenDevsList;
+    public TableColumn chosenTestersList;
+    public TableColumn chosenDesignersList;
+    public TableColumn chosenManagersList;
 
     public HashMap<String, ArrayList<Employee>> employeesHashMap = new HashMap<>();
 
@@ -45,9 +42,9 @@ public class SecondController {
         this.employeesHashMap.getOrDefault(selectedEmployee.getJob(), new ArrayList<>());
         this.employeesHashMap.computeIfAbsent(selectedEmployee.getJob(), k -> new ArrayList<>())
                 .add(selectedEmployee);
-        this.chosenDevsList.getItems().setAll(this.employeesHashMap.get("developer"));
-        this.chosenManagersList.getItems().setAll(this.employeesHashMap.get("project_manager"));
-        this.chosenDesignersList.getItems().setAll(this.employeesHashMap.get("designer"));
-        this.chosenTestersList.getItems().setAll(this.employeesHashMap.get("tester"));
+        this.chosenDevsList.getColumns().setAll(this.employeesHashMap.get("developer"));
+        this.chosenManagersList.getColumns().setAll(this.employeesHashMap.get("project_manager"));
+        this.chosenDesignersList.getColumns().setAll(this.employeesHashMap.get("designer"));
+        this.chosenTestersList.getColumns().setAll(this.employeesHashMap.get("tester"));
     }
 }
