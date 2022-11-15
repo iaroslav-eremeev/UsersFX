@@ -6,6 +6,7 @@ import com.iaroslaveremeev.usersfx.model.Employee;
 import com.iaroslaveremeev.usersfx.model.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.ObservableMap;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -21,11 +22,13 @@ public class SecondController {
     @FXML
     public ComboBox<Employee> employeesRepoComboBox;
     public Button buttonEmployeeChosen;
+    public ObservableMap<String, ArrayList<Employee>> observableMap;
     public ListView chosenDevsList;
     public ListView chosenTestersList;
     public ListView chosenDesignersList;
     public ListView chosenManagersList;
 
+    public EmployeesRepo resRepo = new EmployeesRepo();
     public HashMap<String, ArrayList<Employee>> employeesHashMap = new HashMap<>();
 
     @FXML
@@ -51,10 +54,19 @@ public class SecondController {
         Employee selectedEmployee = this.employeesRepoComboBox.getSelectionModel().getSelectedItem();
         this.employeesHashMap.getOrDefault(selectedEmployee.getJob(), new ArrayList<>());
         this.employeesHashMap.computeIfAbsent(selectedEmployee.getJob(), k -> new ArrayList<>())
-                .add(selectedEmployee);
-        this.chosenDevsList.getItems().setAll(this.employeesHashMap.get("developer"));
-        this.chosenManagersList.getItems().setAll(this.employeesHashMap.get("project_manager"));
-        this.chosenDesignersList.getItems().setAll(this.employeesHashMap.get("designer"));
-        this.chosenTestersList.getItems().setAll(this.employeesHashMap.get("tester"));
+                    .add(selectedEmployee);
+        resRepo.addEmployee(selectedEmployee);
+        if (this.employeesHashMap.get("developer") != null && !resRepo.getEmployees().contains(selectedEmployee)){
+            this.chosenDevsList.getItems().add(this.employeesHashMap.get("developer"));
+        }
+        if (this.employeesHashMap.get("project_manager") != null && !resRepo.getEmployees().contains(selectedEmployee)){
+            this.chosenManagersList.getItems().add(this.employeesHashMap.get("project_manager"));
+        }
+        if (this.employeesHashMap.get("designer") != null && !resRepo.getEmployees().contains(selectedEmployee)){
+            this.chosenDesignersList.getItems().add(this.employeesHashMap.get("designer"));
+        }
+        if (this.employeesHashMap.get("tester") != null && !resRepo.getEmployees().contains(selectedEmployee)){
+            this.chosenTestersList.getItems().add(this.employeesHashMap.get("tester"));
+        }
     }
 }
