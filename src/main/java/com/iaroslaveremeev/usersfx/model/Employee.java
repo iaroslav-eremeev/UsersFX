@@ -64,11 +64,11 @@ public class Employee {
     }
 
     public String showNameSurname() {
-        return name + surname;
+        return name + " " + surname;
     }
 
     @Override
     public String toString() {
-        return name + surname + ", " + job + ", " + experience + " years of experience";
+        return name + " " + surname + ", " + job + ", " + experience + " years of experience";
     }
 }
