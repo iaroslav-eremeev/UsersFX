@@ -77,7 +77,7 @@ public class MainController {
                 new Scene(loader.load(), 500, 500)
         );
         SecondController controller = loader.getController();
-        controller.initData("dfghjk");
+        /*controller.initData("dfghjk");*/
         stage.show();
         Stage close = (Stage) this.buttonUserChosen.getScene().getWindow();
         // do what you have to do

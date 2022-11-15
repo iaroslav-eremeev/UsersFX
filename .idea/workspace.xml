@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfbfadfc-61f9-475e-b09b-eca73f2ae103" name="Changes" comment="Add method showInfo to User, correct toString methods for all classes">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/Repository/EmployeesRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/Repository/EmployeesRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/Repository/UsersRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/Repository/UsersRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/SecondController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/SecondController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iaroslaveremeev/usersfx/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/iaroslaveremeev/usersfx/second.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/iaroslaveremeev/usersfx/second.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java_core_learning" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
