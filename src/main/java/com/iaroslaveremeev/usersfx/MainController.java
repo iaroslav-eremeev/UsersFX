@@ -1,18 +1,13 @@
 package com.iaroslaveremeev.usersfx;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonArrayFormatVisitor;
 import com.iaroslaveremeev.usersfx.model.User;
 import com.iaroslaveremeev.usersfx.Repository.UsersRepo;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -64,23 +59,4 @@ public class MainController {
             System.out.println(file);
         }
     }
-
-    @FXML
-    public void buttonNewForm(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource(
-                        "second.fxml"
-                )
-        );
-        Stage stage = new Stage(StageStyle.DECORATED);
-        stage.setScene(
-                new Scene(loader.load(), 500, 500)
-        );
-        SecondController controller = loader.getController();
-        stage.show();
-        Stage close = (Stage) this.buttonUserChosen.getScene().getWindow();
-        close.close();
-    }
-
-
 }
