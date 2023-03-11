@@ -21,11 +21,12 @@ public class MainController {
     public Button buttonUserChosen;
     public ListView chosenUsersList;
 
+    public UsersRepo mainRepo;
     public UsersRepo resRepo = new UsersRepo();
     @FXML
     public void initialize() throws IOException {
-        UsersRepo usersRepo = new UsersRepo("https://jsonplaceholder.typicode.com/users");
-        this.usersRepoComboBox.setItems(FXCollections.observableList(usersRepo.getUsers()));
+        this.mainRepo = new UsersRepo("https://jsonplaceholder.typicode.com/users");
+        this.usersRepoComboBox.setItems(FXCollections.observableList(mainRepo.getUsers()));
     }
 
     @FXML
@@ -33,6 +34,8 @@ public class MainController {
         User selectedUser = this.usersRepoComboBox.getSelectionModel().getSelectedItem();
         this.chosenUsersList.getItems().add(selectedUser);
         this.resRepo.addUser(selectedUser);
+        this.mainRepo.removeUser(selectedUser);
+        this.usersRepoComboBox.setItems(FXCollections.observableList(mainRepo.getUsers()));
         App.showAlertWithoutHeaderText("Info", selectedUser.showInfo(), Alert.AlertType.INFORMATION);
     }
 

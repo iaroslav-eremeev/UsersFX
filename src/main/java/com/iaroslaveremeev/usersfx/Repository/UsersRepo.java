@@ -33,18 +33,16 @@ public class UsersRepo {
             throw new RuntimeException(e);
         }
     }
-
     public ArrayList<User> getUsers() {
         return users;
     }
-
     public void setUsers(ArrayList<User> users) {
         this.users = users;
     }
-
     public void addUser(User user){
         this.users.add(user);
     }
+    public void removeUser(User user) {this.users.remove(user);}
 
     @Override
     public boolean equals(Object o) {
